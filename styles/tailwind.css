@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+p {
+  margin-bottom: 16px;
+}

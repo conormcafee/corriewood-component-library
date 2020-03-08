@@ -3,40 +3,119 @@
     <title>Corriewood Component Library</title>
     <link rel="stylesheet" href="css/output.css" />
   </head>
-  <body class="antialiased">
-
+  <body class="antialiased leading-relaxed">
     <!-- Header Start -->
 
-    <header class="[ flex items-center justify-between ][ p-8 ][ border-t-8 border-orange-500 ][ font-bold ]">
-      <a href="#">Logo</a>
-      
-      <nav class="flex flex-1 items-center justify-center">
-        <a href="#" class="hover:text-orange-500 mr-8">About Us</a>
-        <a href="#" class="hover:text-orange-500 mr-8">Our Homes</a>
-        <a href="#" class="hover:text-orange-500 mr-8">Provincial Care</a>
-        <a href="#" class="hover:text-orange-500 mr-8">News</a>
-        <a href="#" class="hover:text-orange-500">Contact Us</a>
-      </nav>
+    <header
+      class="[ border-t-8 border-orange-500 ][ font-bold ]"
+      x-data="{ mobilemenu: false }"
+    >
+      <div
+        class="container [ flex flex-wrap items-center justify-between ][ py-8 ]"
+      >
+        <a href="#">Logo</a>
 
-      <a href="#" class="
-        [ text-white bg-orange-500 ]
-        [ h-10 px-4 rounded-lg ]
-        [ flex items-center ]
-      ">Staff Login</a>
+        <nav class="hidden md:flex flex-1 items-center justify-center">
+          <a href="#" class="hover:text-orange-500 mr-8">About Us</a>
+          <a href="#" class="hover:text-orange-500 mr-8">Our Homes</a>
+          <a href="#" class="hover:text-orange-500 mr-8">Provincial Care</a>
+          <a href="#" class="hover:text-orange-500 mr-8">News</a>
+          <a href="#" class="hover:text-orange-500">Contact Us</a>
+        </nav>
+
+        <div class="flex items-center">
+          <a
+            href="#"
+            class="
+          [ text-white bg-orange-500 ]
+          [ h-10 px-4 rounded-lg ]
+          [ flex items-center ]
+        "
+            >Staff Login
+          </a>
+
+          <button
+            class="[ md:hidden ]
+          [ text-orange-500 hover:text-orange-800 ]
+          [ bg-white ]
+          [ h-10 ml-4 px-4 rounded-lg ]"
+            type="button"
+            @click="mobilemenu = true"
+          >
+            <svg
+              class="block h-6 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu-->
+
+        <nav
+          class="
+          [ w-full ]
+          [ mt-8 pt-8 border-t-2 border-gray-200 ]
+        "
+          x-show="mobilemenu"
+          @click.away="mobilemenu = false"
+        >
+          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+            >About Us</a
+          >
+          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+            >Our Homes</a
+          >
+          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+            >Provincial Care</a
+          >
+          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]">News</a>
+          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+            >Contact Us</a
+          >
+        </nav>
+        <!-- End Mobile Menu-->
+      </div>
     </header>
 
     <!-- Header End -->
 
     <!-- Hero -->
 
-    <section class="
+    <section
+      class="
       [ h-screen bg-gray-200 ]
       [ flex flex-col items-center justify-center ]
       [ text-center ]
-    ">
-       <!-- Background Image Required -->
-      <h1 class="text-4xl font-bold max-w-md">Corriewood Introduction Message Goes Here</h1>
-      <a href="#">Learn More</span>
+    "
+    >
+      <!-- Background Image Required -->
+      <h1 class="text-4xl font-bold max-w-md mb-4 leading-snug">
+        Corriewood Introduction Message Goes Here
+      </h1>
+      <a
+        href="#"
+        class="
+          [ inline-flex items-center ]
+          [ text-orange-500 hover:text-orange-800 ]
+        "
+        title="Learn More Link"
+      >
+        <span>Learn More</span>
+        <svg
+          class="block h-6 ml-2 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 512"
+        >
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+          />
+        </svg>
+      </a>
     </section>
 
     <!-- End Hero -->
@@ -46,86 +125,225 @@
     <!-- Start Homes -->
 
     <!-- Featured Home -->
-    
-    <section class="flex justify-between">
-      <figure>
-        <img src="http://placehold.it/600x600" />
-      </figure>
-      <aside>
-        <span>Our Homes</span>
-        <h2>The Corriewood Group</h2>
-        <p>Established in 1985, The Corriewood Group, is a family-owned healthcare leader providing nursing, residential and disability care in picturesque locations throughout Ireland.</p>
-        <p>Our vision of care is underpinned by our person-centred approach to ensure each home is a welcoming and vibrant place where independence, choice, dignity and the highest standards of care are valued above all else.</p>
-        <a href="#">Learn More</a>
-      </aside>
-    </section>
 
-    <!-- Other Homes -->
+    <section class="container">
+      <section class="[ flex flex-wrap ][ -mx-4 ]">
+        <figure class="[ w-full lg:w-2/3 ][ px-4 ]">
+          <img
+            src="http://placehold.it/900x675/edf2f7/edf2f7"
+            class="rounded-lg"
+          />
+        </figure>
+        <aside class="[ w-full lg:w-1/3 ][ px-4 py-8 ]">
+          <span
+            class="[ block ][ text-orange-500 uppercase ][ font-bold tracking-wide ][ mb-4 ]"
+            >Our Homes</span
+          >
+          <h2 class="text-3xl font-bold mb-4">The Corriewood Group</h2>
 
-    <section>
-      <h3>Other Homes</h3>
+          <span class="block h-1 w-16 bg-orange-500 mb-4"></span>
 
-      <div class="flex flex-wrap [ -mx-4 ]">
-        <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-          <figure>
-            <img src="http://placehold.it/400x400" />
-            <figcaption>
-              <h4>Corriewood Private Clinic</h4>
-              <span>Nursing Home</span>
-            </figcaption>
-          </figure>
-        </a>
-        
-        <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-          <figure>
-            <img src="http://placehold.it/400x400" />
-            <figcaption>
-              <h4>The Gate Lodge</h4>
-              <span>Residential Home</span>
-            </figcaption>
-          </figure>
-        </a>
-        
-        <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-          <figure>
-            <img src="http://placehold.it/400x400" />
-            <figcaption>
-              <h4>Seeconnell Private Village</h4>
-              <span>Residential Home</span>
-            </figcaption>
-          </figure>
-        </a>
-  
-        <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-          <figure>
-            <img src="http://placehold.it/400x400" />
-            <figcaption>
-              <h4>Blair Lodge</h4>
-              <span>Residential Home</span>
-            </figcaption>
-          </figure>
-        </a>
-        
-        <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-          <figure>
-            <img src="http://placehold.it/400x400" />
-            <figcaption>
-              <h4>Croob Cottages</h4>
-              <span>Support Living</span>
-            </figcaption>
-          </figure>
-        </a>
-        
-        <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-          <figure>
-            <img src="http://placehold.it/400x400" />
-            <figcaption>
-              <h4>Wood Lodge</h4>
-              <span>Nurse Home</span>
-            </figcaption>
-          </figure>
-        </a>
-      </div>
+          <p>
+            Established in 1985, The Corriewood Group, is a family-owned
+            healthcare leader providing nursing, residential and disability care
+            in picturesque locations throughout Ireland.
+          </p>
+          <p>
+            Our vision of care is underpinned by our person-centred approach to
+            ensure each home is a welcoming and vibrant place where
+            independence, choice, dignity and the highest standards of care are
+            valued above all else.
+          </p>
+          <a
+            href="#"
+            class="
+            [ text-white bg-orange-500 ]
+            [ h-10 px-4 rounded-lg ]
+            [ inline-flex items-center ]
+          "
+            >Learn More
+          </a>
+        </aside>
+      </section>
+      <!-- Other Homes -->
+
+      <!-- List
+        Corriewood Private Clinic - Nursing Home
+        The Gate Lodge - Residential Home
+        Seeconnell Private Village - Residential Home
+        Blair Lodge - Residential Home
+        Croob Cottage - Support Living
+        Wood Loodge - Nursing Home
+      -->
+
+      <section class="py-8">
+        <h3 class="text-2xl font-bold mb-4">Our Homes</h3>
+
+        <div class="flex flex-wrap [ -mx-4 ]">
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="http://placehold.it/600x450/edf2f7/edf2f7"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4">
+                <h4 class="text-base font-bold mb-1">
+                  Name Here
+                </h4>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                >
+                  <span>Type Here</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="http://placehold.it/600x450/edf2f7/edf2f7"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4">
+                <h4 class="text-base font-bold mb-1">
+                  Name Here
+                </h4>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                >
+                  <span>Type Here</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="http://placehold.it/600x450/edf2f7/edf2f7"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4">
+                <h4 class="text-base font-bold mb-1">
+                  Name Here
+                </h4>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                >
+                  <span>Type Here</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="http://placehold.it/600x450/edf2f7/edf2f7"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4">
+                <h4 class="text-base font-bold mb-1">
+                  Name Here
+                </h4>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                >
+                  <span>Type Here</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="http://placehold.it/600x450/edf2f7/edf2f7"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4">
+                <h4 class="text-base font-bold mb-1">
+                  Name Here
+                </h4>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                >
+                  <span>Type Here</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="http://placehold.it/600x450/edf2f7/edf2f7"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4">
+                <h4 class="text-base font-bold mb-1">
+                  Name Here
+                </h4>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                >
+                  <span>Type Here</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 512"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
     </section>
 
     <!-- End Homes -->
@@ -138,7 +356,14 @@
       <article>
         <h3>Our Services at Corriewood Group</h3>
 
-        <p>It is our aim to offer a range of services across our homes, which enhance the quality of life our service users. Our homes provide personal and social care, practical support and other related domiciliary services. We recognise that this can only happen by employing staff who are trained to deliver a high-quality professional service to our clients.</p>
+        <p>
+          It is our aim to offer a range of services across our homes, which
+          enhance the quality of life our service users. Our homes provide
+          personal and social care, practical support and other related
+          domiciliary services. We recognise that this can only happen by
+          employing staff who are trained to deliver a high-quality professional
+          service to our clients.
+        </p>
       </article>
       <aside>
         <ul>
@@ -162,85 +387,91 @@
       </aside>
     </section>
 
-     <!-- End Services -->
+    <!-- End Services -->
 
-     <div class="py-6"></div>
+    <div class="py-6"></div>
 
-     <!-- What Makes Us Different -->
+    <!-- What Makes Us Different -->
 
-     <section>
-       <h3>What Makes Us Different</h3>
-       <img src="http://placehold.it/150x150" class="rounded-full" />
-     </section>
+    <section>
+      <h3>What Makes Us Different</h3>
+      <img src="http://placehold.it/150x150" class="rounded-full" />
+    </section>
 
-      <!-- End What Makes Us Different -->
-      
-      <div class="py-6"></div>
+    <!-- End What Makes Us Different -->
 
-      <!-- Testimonials -->
+    <div class="py-6"></div>
+
+    <!-- Testimonials -->
+
+    <section>
+      <h3>What People Say About US</h3>
+    </section>
+
+    <!-- End Testimonials -->
+
+    <div class="py-6"></div>
+
+    <!-- Maps -->
+
+    <section class="flex">
+      <img src="http://placehold.it/500x500" />
+      <img src="http://placehold.it/500x500" />
+      <img src="http://placehold.it/500x500" />
+      <img src="http://placehold.it/500x500" />
+    </section>
+
+    <!-- Ends Maps -->
+
+    <footer>
+      <aside>
+        <p>Logo Here</p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh elit,
+          ultricies vitae nibh at, maximus accumsan tellus. Praesent mi nibh,
+          ultrices in nibh sed, semper consectetur eros.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh elit,
+          ultricies vitae nibh at, maximus accumsan tellus. Praesent mi nibh,
+          ultrices in nibh sed, semper consectetur eros.
+        </p>
+      </aside>
+      <nav>
+        <aside>
+          <h4>Category</h4>
+          <a href="#">About Us</a>
+          <a href="#">Provincial Care</a>
+          <a href="#">News</a>
+          <a href="#">FAQs</a>
+          <a href="#">Contact Us</a>
+        </aside>
+        <aside>
+          <h4>Our Homes</h4>
+          <a href="#">Corriewood</a>
+          <a href="#">Groop</a>
+          <a href="#">Seeconnell</a>
+          <a href="#">Blair Lodge</a>
+          <a href="#">Group 1</a>
+          <a href="#">Group 2</a>
+        </aside>
+      </nav>
 
       <section>
-        <h3>What People Say About US</h3>
-      </section>
+        <span>&copy; Copyright 2020 Corriewood Group</span>
 
-      <!-- End Testimonials -->
-
-      <div class="py-6"></div>
-
-      <!-- Maps -->
-
-      <section class="flex">
-
-        <img src="http://placehold.it/500x500" />
-        <img src="http://placehold.it/500x500" />
-        <img src="http://placehold.it/500x500" />
-        <img src="http://placehold.it/500x500" />
-
-      </section>
-
-      <!-- Ends Maps -->
-
-      <footer>
-        <aside>
-          <p>Logo Here</p>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent mi nibh, ultrices in nibh sed, semper consectetur eros.</p>
-  
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent mi nibh, ultrices in nibh sed, semper consectetur eros.</p>
-        </aside>
         <nav>
-          <aside>
-            <h4>Category</h4>
-            <a href="#">About Us</a>
-            <a href="#">Provincial Care</a>
-            <a href="#">News</a>
-            <a href="#">FAQs</a>
-            <a href="#">Contact Us</a>
-          </aside>
-          <aside>
-            <h4>Our Homes</h4>
-            <a href="#">Corriewood</a>
-            <a href="#">Groop</a>
-            <a href="#">Seeconnell</a>
-            <a href="#">Blair Lodge</a>
-            <a href="#">Group 1</a>
-            <a href="#">Group 2</a>
-          </aside>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Sitemap</a>
+          <a href="#"><img src="http://placehold.it/50x50"/></a>
+          <a href="#"><img src="http://placehold.it/50x50"/></a>
         </nav>
-
-        <section>
-          <span>&copy; Copyright 2020 Corriewood Group</span>
-
-          <nav>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Sitemap</a>
-            <a href="#"><img src="http://placehold.it/50x50" /></a>
-            <a href="#"><img src="http://placehold.it/50x50" /></a>
-          </nav>
-        </section>
-      </footer>
-    
-
+      </section>
+    </footer>
   </body>
+
+  <script defer src="assets/js/alpine-ie11.js"></script>
 </html>
