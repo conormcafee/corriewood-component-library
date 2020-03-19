@@ -11,9 +11,8 @@
   </head>
   <body class="antialiased leading-relaxed">
     <!-- Header Start -->
-
     <header
-      class="[ border-t-8 border-orange-500 ][ font-bold ]"
+      class="[ border-t-8 border-cw-dark-teal ][ font-bold ]"
       x-data="{ mobilemenu: false }"
     >
       <div
@@ -22,18 +21,20 @@
         <a href="#">Logo</a>
 
         <nav class="hidden md:flex flex-1 items-center justify-center">
-          <a href="#" class="hover:text-orange-500 mr-8">About Us</a>
-          <a href="#" class="hover:text-orange-500 mr-8">Our Homes</a>
-          <a href="#" class="hover:text-orange-500 mr-8">Provincial Care</a>
-          <a href="#" class="hover:text-orange-500 mr-8">News</a>
-          <a href="#" class="hover:text-orange-500">Contact Us</a>
+          <a href="#" class="text-cw-navy hover:text-cw-cyan mr-8">About Us</a>
+          <a href="#" class="text-cw-navy hover:text-cw-cyan mr-8">Our Homes</a>
+          <a href="#" class="text-cw-navy hover:text-cw-cyan mr-8"
+            >Provincial Care</a
+          >
+          <a href="#" class="text-cw-navy hover:text-cw-cyan mr-8">News</a>
+          <a href="#" class="text-cw-navy hover:text-cw-cyan">Contact Us</a>
         </nav>
 
         <div class="flex items-center">
           <a
             href="#"
             class="
-          [ text-white bg-orange-500 ]
+          [ text-white bg-cw-cyan hover:bg-cw-dark-teal ]
           [ h-10 px-4 rounded-lg ]
           [ flex items-center ]
         "
@@ -42,7 +43,7 @@
 
           <button
             class="[ md:hidden ]
-          [ text-orange-500 hover:text-orange-800 ]
+          [ text-cw-navy hover:text-cyan ]
           [ bg-white ]
           [ h-10 ml-4 px-4 rounded-lg ]"
             type="button"
@@ -65,50 +66,53 @@
         <nav
           class="
           [ w-full ]
-          [ mt-8 pt-8 border-t-2 border-gray-200 ]
+          [ mt-8 pt-8 border-t-2 border-gray-300 ]
         "
           x-show="mobilemenu"
           @click.away="mobilemenu = false"
+          x-cloak
         >
-          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+          <a href="#" class="block [ text-cw-navy hover:text-cw-cyan ][ mb-8 ]"
             >About Us</a
           >
-          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+          <a href="#" class="block [ text-cw-navy hover:text-cw-cyan ][ mb-8 ]"
             >Our Homes</a
           >
-          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+          <a href="#" class="block [ text-cw-navy hover:text-cw-cyan ][ mb-8 ]"
             >Provincial Care</a
           >
-          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]">News</a>
-          <a href="#" class="block [ hover:text-orange-500 ][ mb-8 ]"
+          <a href="#" class="block [ text-cw-navy hover:text-cw-cyan ][ mb-8 ]"
+            >News</a
+          >
+          <a href="#" class="block [ text-cw-navy hover:text-cw-cyan ][ mb-8 ]"
             >Contact Us</a
           >
         </nav>
         <!-- End Mobile Menu-->
       </div>
     </header>
-
     <!-- Header End -->
 
     <!-- Hero -->
-
     <section
+      data-overlay
       class="
-      [ h-screen bg-gray-200 ]
-      [ flex flex-col items-center justify-center ]
-      [ text-center ]
-    "
+    [ py-32 ]
+    [ mb-16 ]
+    [ lg:h-screen bg-cover bg-center ]
+    [ flex flex-col items-center justify-center ]
+    [ text-center text-white ]"
+      style="background-image: url('assets/images/EOSR1855.jpg');"
     >
-      <!-- Background Image Required -->
-      <h1 class="text-4xl font-bold max-w-md mb-4 leading-snug">
+      <h1 class="text-4xl text-shadow font-bold max-w-md mb-4 leading-snug">
         Corriewood Introduction Message Goes Here
       </h1>
       <a
         href="#"
         class="
-          [ inline-flex items-center ]
-          [ text-orange-500 hover:text-orange-800 ]
-        "
+              [ inline-flex items-center ]
+              [ text-white text-shadow hover:text-cw-cyan ]
+            "
         title="Learn More Link"
       >
         <span>Learn More</span>
@@ -123,29 +127,90 @@
         </svg>
       </a>
     </section>
-
     <!-- End Hero -->
+
+    <!-- Sub Navigation -->
+    <section class="bg-gray-300 py-4 mb-16">
+      <div class="container">
+        <nav class="flex flex-wrap -mx-4">
+          <a
+            href="#"
+            class="
+              [ w-full md:w-1/2 lg:w-1/4 ]
+              [ p-4 ]
+              [ text-white hover:text-white ]"
+          >
+            <div
+              class="
+                [ flex md:flex-col items-center md:items-start justify-between ]
+                [ bg-cw-dark-teal hover:bg-cw-cyan ]
+                [ p-4 rounded-lg h-full ]"
+            >
+              <span class="block text-base max-w-xs font-bold md:mb-4"
+                >Active Button</span
+              >
+              <svg
+                class="block h-4 fill-current"
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="
+              [ w-full md:w-1/2 lg:w-1/4 ]
+              [ p-4 ]
+              [ text-white hover:text-white ]"
+          >
+            <div
+              class="
+                [ flex md:flex-col items-center md:items-start justify-between ] 
+                [ bg-gray-500 hover:bg-cw-cyan ]
+                [ p-4 rounded-lg h-full ]"
+            >
+              <span class="block text-base font-bold md:mb-4"
+                >Inactive Button</span
+              >
+              <svg
+                class="block h-4 fill-current"
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"
+                />
+              </svg>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </section>
+    <!-- Ends Sub Navigation -->
 
     <!-- Start Homes -->
 
     <!-- Featured Home -->
-
-    <section class="container [ mt-8 ]">
+    <section class="container">
       <section class="[ flex flex-wrap ][ -mx-4 ]">
         <figure class="[ w-full lg:w-2/3 ][ px-4 ]">
-          <img
-            src="https://placehold.it/900x675/edf2f7/edf2f7"
-            class="rounded-lg"
-          />
+          <!-- https://placehold.it/900x675 -->
+          <img src="assets/images/EOSR1574.jpg" class="rounded-lg shadow-md" />
         </figure>
         <aside class="[ w-full lg:w-1/3 ][ px-4 py-8 ]">
           <span
-            class="[ block ][ text-orange-500 uppercase ][ font-bold tracking-wide ][ mb-4 ]"
+            class="[ block ][ text-cw-blood-orange uppercase ][ font-bold tracking-wide ]"
             >Our Homes</span
           >
-          <h2 class="text-3xl font-bold mb-4">The Corriewood Group</h2>
+          <h2 class="text-cw-navy text-3xl font-bold mb-2">
+            The Corriewood Group
+          </h2>
 
-          <span class="block h-1 w-16 bg-orange-500 mb-4"></span>
+          <span class="block h-1 w-16 bg-cw-blood-orange mb-4"></span>
 
           <p>
             Established in 1985, The Corriewood Group, is a family-owned
@@ -161,14 +226,16 @@
           <a
             href="#"
             class="
-            [ text-white bg-orange-500 ]
+            [ text-white hover:text-white bg-cw-dark-teal hover:bg-cw-cyan ]
             [ h-10 px-4 rounded-lg ]
+            [ font-bold ]
             [ inline-flex items-center ]
           "
             >Learn More
           </a>
         </aside>
       </section>
+
       <!-- Other Homes -->
 
       <!-- List
@@ -181,21 +248,21 @@
       -->
 
       <section class="py-8">
-        <h3 class="text-2xl font-bold mb-4">Our Homes</h3>
+        <h3 class="text-cw-navy text-2xl font-bold">Our Homes</h3>
 
         <div class="flex flex-wrap [ -mx-4 ]">
           <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
             <figure>
               <img
-                src="https://placehold.it/600x450/edf2f7/edf2f7"
+                src="https://placehold.it/600x450/e2e8f0/e2e8f0"
                 class="rounded-lg"
               />
               <figcaption class="py-4">
-                <h4 class="text-base font-bold mb-1">
+                <h4 class="text-cw-dark-teal text-base font-bold mb-1">
                   Name Here
                 </h4>
                 <span
-                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                  class="inline-flex items-center font-bold text-sm text-cw-blood-orange"
                 >
                   <span>Type Here</span>
                   <svg
@@ -214,123 +281,15 @@
           <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
             <figure>
               <img
-                src="https://placehold.it/600x450/edf2f7/edf2f7"
+                src="https://placehold.it/600x450/e2e8f0/e2e8f0"
                 class="rounded-lg"
               />
               <figcaption class="py-4">
-                <h4 class="text-base font-bold mb-1">
+                <h4 class="text-cw-dark-teal text-base font-bold mb-1">
                   Name Here
                 </h4>
                 <span
-                  class="inline-flex items-center font-bold text-sm text-orange-500"
-                >
-                  <span>Type Here</span>
-                  <svg
-                    class="block h-4 ml-2 fill-current"
-                    xmlns="https://www.w3.org/2000/svg"
-                    viewBox="0 0 256 512"
-                  >
-                    <path
-                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
-                    />
-                  </svg>
-                </span>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-            <figure>
-              <img
-                src="https://placehold.it/600x450/edf2f7/edf2f7"
-                class="rounded-lg"
-              />
-              <figcaption class="py-4">
-                <h4 class="text-base font-bold mb-1">
-                  Name Here
-                </h4>
-                <span
-                  class="inline-flex items-center font-bold text-sm text-orange-500"
-                >
-                  <span>Type Here</span>
-                  <svg
-                    class="block h-4 ml-2 fill-current"
-                    xmlns="https://www.w3.org/2000/svg"
-                    viewBox="0 0 256 512"
-                  >
-                    <path
-                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
-                    />
-                  </svg>
-                </span>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-            <figure>
-              <img
-                src="https://placehold.it/600x450/edf2f7/edf2f7"
-                class="rounded-lg"
-              />
-              <figcaption class="py-4">
-                <h4 class="text-base font-bold mb-1">
-                  Name Here
-                </h4>
-                <span
-                  class="inline-flex items-center font-bold text-sm text-orange-500"
-                >
-                  <span>Type Here</span>
-                  <svg
-                    class="block h-4 ml-2 fill-current"
-                    xmlns="https://www.w3.org/2000/svg"
-                    viewBox="0 0 256 512"
-                  >
-                    <path
-                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
-                    />
-                  </svg>
-                </span>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-            <figure>
-              <img
-                src="https://placehold.it/600x450/edf2f7/edf2f7"
-                class="rounded-lg"
-              />
-              <figcaption class="py-4">
-                <h4 class="text-base font-bold mb-1">
-                  Name Here
-                </h4>
-                <span
-                  class="inline-flex items-center font-bold text-sm text-orange-500"
-                >
-                  <span>Type Here</span>
-                  <svg
-                    class="block h-4 ml-2 fill-current"
-                    xmlns="https://www.w3.org/2000/svg"
-                    viewBox="0 0 256 512"
-                  >
-                    <path
-                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
-                    />
-                  </svg>
-                </span>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
-            <figure>
-              <img
-                src="https://placehold.it/600x450/edf2f7/edf2f7"
-                class="rounded-lg"
-              />
-              <figcaption class="py-4">
-                <h4 class="text-base font-bold mb-1">
-                  Name Here
-                </h4>
-                <span
-                  class="inline-flex items-center font-bold text-sm text-orange-500"
+                  class="inline-flex items-center font-bold text-sm text-cw-blood-orange"
                 >
                   <span>Type Here</span>
                   <svg
@@ -354,7 +313,7 @@
 
     <!-- Services -->
 
-    <section class="container">
+    <section class="container [ mb-16 ]">
       <div class="flex flex-wrap justify-between -mx-4">
         <article class="w-full md:w-1/2 px-4">
           <h3 class="text-2xl font-bold mb-4">
@@ -372,7 +331,7 @@
         </article>
 
         <aside class="w-full md:w-1/2 px-4">
-          <div class="bg-gray-200 p-8">
+          <div class="bg-gray-300 p-8">
             <ul class="flex flex-wrap -mx-4">
               <li class="w-1/2 px-4 mb-4">
                 <img
@@ -414,7 +373,7 @@
 
     <!-- What Makes Us Different -->
 
-    <section class="bg-gray-200 text-center py-8 my-16">
+    <section class="bg-gray-300 text-center py-8 mb-16">
       <div class="container">
         <h3 class="text-2xl font-bold mb-8">What Makes Us Different</h3>
         <div class="md:max-w-2xl mx-auto">
@@ -465,13 +424,706 @@
 
     <!-- End What Makes Us Different -->
 
+    <!-- Starts Meet the Team -->
+
+    <section class="mb-16">
+      <div class="container">
+        <article class="text-center max-w-md mx-auto">
+          <h2 class="text-2xl font-bold mb-4">Meet the Corriewood Team</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+            elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent mi
+            nibh, ultrices in nibh sed, semper consectetur eros.
+          </p>
+        </article>
+
+        <aside class="flex flex-wrap">
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="https://placehold.it/600x450/e2e8f0/e2e8f0"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4 text-center">
+                <h4 class="text-lg font-bold mb-1">
+                  Staff Name
+                </h4>
+                <p class="text-sm mb-1">Job Title</p>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-cw-navy"
+                >
+                  <span>Email</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="https://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="https://placehold.it/600x450/e2e8f0/e2e8f0"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4 text-center">
+                <h4 class="text-lg font-bold mb-1">
+                  Staff Name
+                </h4>
+                <p class="text-sm mb-1">Job Title</p>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-cw-navy"
+                >
+                  <span>Email</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="https://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="w-full sm:w-1/2 lg:w-1/3 p-4">
+            <figure>
+              <img
+                src="https://placehold.it/600x450/e2e8f0/e2e8f0"
+                class="rounded-lg"
+              />
+              <figcaption class="py-4 text-center">
+                <h4 class="text-lg font-bold mb-1">
+                  Staff Name
+                </h4>
+                <p class="text-sm mb-1">Job Title</p>
+                <span
+                  class="inline-flex items-center font-bold text-sm text-cw-navy"
+                >
+                  <span>Email</span>
+                  <svg
+                    class="block h-4 ml-2 fill-current"
+                    xmlns="https://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"
+                    />
+                  </svg>
+                </span>
+              </figcaption>
+            </figure>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Ends Meet the Team -->
+
+    <!-- Alternate  Image / Text -->
+
+    <section class="mb-16">
+      <section
+        class="pt-64 pb-16 md:pt-32 md:pb-32 bg-cover bg-center"
+        style="background-image: url('https://placehold.it/2000x2000/e2e8f0/e2e8f0');"
+      >
+        <div class="container [ md:flex md:justify-end ]">
+          <article
+            class="
+        [ w-full md:w-1/2 p-4 ]
+        [ bg-white rounded-lg shadow-md ]"
+          >
+            <span
+              class="inline-block text-xs uppercase mb-2 font-bold border-b-2 border-orange-300 text-cw-navy"
+              >Categories of Care</span
+            >
+            <h3 class="font-bold text-2xl mb-4">Nursing Care</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+              elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+              mi nibh, ultrices in nibh sed, semper consectetur eros.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+              elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+              mi nibh, ultrices in nibh sed, semper consectetur eros.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="pt-64 pb-16 md:pt-32 md:pb-32 bg-cover bg-center"
+        style="background-image: url('https://placehold.it/2000x2000/cbd5e0/cbd5e0');"
+      >
+        <div class="container">
+          <article
+            class="
+        [ w-full md:w-1/2 p-4 ]
+        [ bg-white rounded-lg shadow-md ]"
+          >
+            <span
+              class="inline-block text-xs uppercase mb-2 font-bold border-b-2 border-orange-300 text-cw-navy"
+              >Categories of Care</span
+            >
+            <h3 class="font-bold text-2xl mb-4">Terminally Ill</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+              elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+              mi nibh, ultrices in nibh sed, semper consectetur eros.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+              elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+              mi nibh, ultrices in nibh sed, semper consectetur eros.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="pt-64 pb-16 md:pt-32 md:pb-32 bg-cover bg-center"
+        style="background-image: url('https://placehold.it/2000x2000/e2e8f0/e2e8f0');"
+      >
+        <div class="container [ md:flex md:justify-end ]">
+          <article
+            class="
+        [ w-full md:w-1/2 p-4 ]
+        [ bg-white rounded-lg shadow-md ]"
+          >
+            <span
+              class="inline-block text-xs uppercase mb-2 font-bold border-b-2 border-orange-300 text-cw-navy"
+              >Categories of Care</span
+            >
+            <h3 class="font-bold text-2xl mb-4">Dementia</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+              elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+              mi nibh, ultrices in nibh sed, semper consectetur eros.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+              elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+              mi nibh, ultrices in nibh sed, semper consectetur eros.
+            </p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- Ends Alternate Image / Text -->
+
+    <!-- CTA -->
+
+    <section class="mb-16">
+      <section
+        class="pt-64 pb-16 md:pt-32 md:pb-32 bg-cover bg-center"
+        style="background-image: url('https://placehold.it/2000x2000/e2e8f0/e2e8f0');"
+      >
+        <div class="container md:flex justify-end">
+          <div class="md:w-1/2 px-4">
+            <h2 class="font-bold text-2xl max-w-xs mb-4">
+              Download our Brochure
+            </h2>
+            <a
+              href="#"
+              class="
+            [ text-white bg-cw-navy hover:bg-orange-700 ]
+            [ h-10 px-4 rounded-lg ]
+            [ inline-flex items-center ]
+          "
+            >
+              <span class="font-bold">Download Now</span>
+              <svg
+                class="block h-4 ml-2 fill-current"
+                xmlns="https://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Ends CTA -->
+
+    <!-- Start Service Block -->
+
+    <section class="mb-16">
+      <div class="container">
+        <article class="text-center max-w-md mx-auto mb-16">
+          <h2 class="text-2xl font-bold mb-4">Services</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+            elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent mi
+            nibh, ultrices in nibh sed, semper consectetur eros.
+          </p>
+        </article>
+
+        <div class="max-w-4xl mx-auto">
+          <ul class="flex flex-wrap -mx-4">
+            <li
+              class="w-full md:w-1/2 lg:w-1/3 px-4 py-6 text-center border-r-2 border-b-2 border-gray-200"
+            >
+              <div class="p-4">
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="block mx-auto rounded-full mb-4"
+                />
+                <span class="block font-bold text-xl">Service Title</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  nibh elit
+                </p>
+              </div>
+            </li>
+            <li
+              class="w-full md:w-1/2 lg:w-1/3 px-4 py-6 text-center border-l-2 border-r-2 border-b-2 border-gray-200"
+            >
+              <div class="p-4">
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="block mx-auto rounded-full mb-4"
+                />
+                <span class="block font-bold text-xl">Service Title</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  nibh elit
+                </p>
+              </div>
+            </li>
+            <li
+              class="w-full md:w-1/2 lg:w-1/3 px-4 py-6 text-center border-l-2 border-b-2 border-gray-200"
+            >
+              <div class="p-4">
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="block mx-auto rounded-full mb-4"
+                />
+                <span class="block font-bold text-xl">Service Title</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  nibh elit
+                </p>
+              </div>
+            </li>
+            <li
+              class="w-full md:w-1/2 lg:w-1/3 px-4 py-6 text-center border-r-2 border-t-2 border-gray-200"
+            >
+              <div class="p-4">
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="block mx-auto rounded-full mb-4"
+                />
+                <span class="block font-bold text-xl">Service Title</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  nibh elit
+                </p>
+              </div>
+            </li>
+            <li
+              class="w-full md:w-1/2 lg:w-1/3 px-4 py-6 text-center border-l-2 border-r-2 border-t-2 border-gray-200"
+            >
+              <div class="p-4">
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="block mx-auto rounded-full mb-4"
+                />
+                <span class="block font-bold text-xl">Service Title</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  nibh elit
+                </p>
+              </div>
+            </li>
+            <li
+              class="w-full md:w-1/3 px-4 py-6 text-center border-l-2 border-t-2 border-gray-200"
+            >
+              <div class="p-4">
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="block mx-auto rounded-full mb-4"
+                />
+                <span class="block font-bold text-xl">Service Title</span>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  nibh elit
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Service Block -->
+
+    <!-- Facilities Block -->
+
+    <section class="mb-16">
+      <div class="[ max-w-4xl mx-auto px-4 ]">
+        <ul class="flex flex-wrap -mx-4">
+          <li class="flex items-start px-4 w-full md:w-1/2 mb-4">
+            <img
+              src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+              alt="Icon"
+              class="rounded-full mt-2"
+            />
+            <div class="ml-4">
+              <h3 class="font-bold text-lg mb-2">Facility 01</h3>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+                elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+                mi nibh, ultrices in nibh sed, semper consectetur eros.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start px-4 w-full md:w-1/2 mb-4">
+            <img
+              src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+              alt="Icon"
+              class="rounded-full mt-2"
+            />
+            <div class="ml-4">
+              <h3 class="font-bold text-lg mb-2">Facility 02</h3>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+                elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+                mi nibh, ultrices in nibh sed, semper consectetur eros.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start px-4 w-full md:w-1/2 mb-4">
+            <img
+              src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+              alt="Icon"
+              class="rounded-full mt-2"
+            />
+            <div class="ml-4">
+              <h3 class="font-bold text-lg mb-2">Facility 03</h3>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+                elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+                mi nibh, ultrices in nibh sed, semper consectetur eros.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start px-4 w-full md:w-1/2 mb-4">
+            <img
+              src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+              alt="Icon"
+              class="rounded-full mt-2"
+            />
+            <div class="ml-4">
+              <h3 class="font-bold text-lg mb-2">Facility 04</h3>
+              <p class="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+                elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+                mi nibh, ultrices in nibh sed, semper consectetur eros.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- End Facilities Block -->
+
+    <!-- Gallery -->
+
+    <section class="mb-16">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <aside class="flex flex-col w-full md:w-1/2">
+            <div class="flex order-1">
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+            </div>
+
+            <div class="w-full p-4 order-2 md:order-1">
+              <img
+                src="https://placehold.it/900x900/e2e8f0/e2e8f0"
+                alt="Image"
+              />
+            </div>
+          </aside>
+          <aside class="flex flex-col w-full md:w-1/2">
+            <div class="w-full p-4 order-2 md:order-1">
+              <img
+                src="https://placehold.it/900x900/e2e8f0/e2e8f0"
+                alt="Image"
+              />
+            </div>
+            <div class="flex order-1">
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+            </div>
+          </aside>
+          <aside class="flex flex-col w-full md:w-1/2">
+            <div class="w-full p-4 order-2 md:order-1">
+              <img
+                src="https://placehold.it/900x900/e2e8f0/e2e8f0"
+                alt="Image"
+              />
+            </div>
+            <div class="flex order-1">
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+            </div>
+          </aside>
+          <aside class="flex flex-col w-full md:w-1/2">
+            <div class="flex order-1">
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+              <div class="w-1/2 p-4">
+                <img
+                  src="https://placehold.it/300x300/e2e8f0/e2e8f0"
+                  alt="Image"
+                />
+              </div>
+            </div>
+
+            <div class="w-full p-4 order-2 md:order-1">
+              <img
+                src="https://placehold.it/900x900/e2e8f0/e2e8f0"
+                alt="Image"
+              />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Gallery -->
+
+    <!-- Two Col & Image Text -->
+    <section class="mb-16">
+      <div class="container text-center mb-16">
+        <div class="max-w-md mx-auto">
+          <h2 class="font-bold text-2xl mb-4">Who We Are</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+            elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent mi
+            nibh, ultrices in nibh sed, semper consectetur eros.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+            elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent mi
+            nibh, ultrices in nibh sed, semper consectetur eros.
+          </p>
+        </div>
+      </div>
+      <img
+        src="https://placehold.it/2000x1000/e2e8f0/e2e8f0"
+        alt="Image"
+        class="mx-auto"
+      />
+    </section>
+
+    <!-- End Two Col Text-->
+
+    <!-- Meet the Team CTA -->
+
+    <section class="bg-orange-600 text-white mb-16 overflow-hidden">
+      <div class="container">
+        <div class="flex flex-wrap -mx-4 py-16">
+          <article class="flex flex-col w-full lg:w-1/2 px-4 justify-center">
+            <h3 class="font-bold text-xl text-center lg:text-left mb-2">
+              Meet the Team
+            </h3>
+            <p class="max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+              elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent
+              mi nibh, ultrices in nibh sed, semper consectetur eros.
+            </p>
+          </article>
+          <aside class="w-full lg:w-1/2 flex items-center justify-center">
+            <img
+              src="https://placehold.it/150x150/a0aec0/a0aec0"
+              alt="Image"
+              class="rounded-full transform translate-x-6"
+            />
+            <img
+              src="https://placehold.it/200x200/a0aec0/a0aec0"
+              alt="Image"
+              class="rounded-full z-10 border-8 border-orange-600"
+            />
+            <img
+              src="https://placehold.it/150x150/a0aec0/a0aec0"
+              alt="Image"
+              class="rounded-full transform -translate-x-6"
+            />
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Meet the Team CTA -->
+
+    <!-- Current Vacancies -->
+    <section class="mb-16">
+      <div class="container">
+        <article class="text-center max-w-md mx-auto mb-16">
+          <h3 class="font-bold text-2xl">Current Vacanies</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh
+            elit, ultricies vitae nibh at, maximus accumsan tellus. Praesent mi
+            nibh, ultrices in nibh sed, semper consectetur eros.
+          </p>
+        </article>
+
+        <aside class="max-w-5xl mx-auto">
+          <ul class="flex flex-wrap -mx-4">
+            <li class="w-full md:w-1/2 p-4">
+              <a
+                href="#"
+                class="
+                  [ flex items-start ]
+                  [ border-2 border-gray-300 ]
+                  [ bg-white hover:bg-gray-300 ]
+                  [ px-4 py-8 rounded-lg ]"
+              >
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="rounded-full mx-8"
+                />
+
+                <div class="ml-4">
+                  <h4 class="font-bold text-xl">Job Title</h4>
+                  <p class="text-sm mb-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+
+                  <span class="font-bold text-orange-600">Learn More</span>
+                </div>
+              </a>
+            </li>
+            <li class="w-full md:w-1/2 p-4">
+              <a
+                href="#"
+                class="
+                  [ flex items-start ]
+                  [ h-full ]
+                  [ border-2 border-gray-300 ]
+                  [ bg-white hover:bg-gray-300 ]
+                  [ px-4 py-8 rounded-lg ]"
+              >
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="rounded-full mx-8"
+                />
+
+                <div class="ml-4">
+                  <h4 class="font-bold text-xl">Job Title</h4>
+                  <p class="text-sm mb-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+
+                  <span class="font-bold text-orange-600">Learn More</span>
+                </div>
+              </a>
+            </li>
+            <li class="w-full md:w-1/2 p-4">
+              <a
+                href="#"
+                class="
+                  [ flex items-start ]
+                  [ border-2 border-gray-300 ]
+                  [ bg-white hover:bg-gray-300 ]
+                  [ px-4 py-8 rounded-lg ]"
+              >
+                <img
+                  src="https://placehold.it/75x75/e2e8f0/e2e8f0"
+                  alt="Icon"
+                  class="rounded-full mx-8"
+                />
+
+                <div class="ml-4">
+                  <h4 class="font-bold text-xl">Job Title</h4>
+                  <p class="text-sm mb-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+
+                  <span class="font-bold text-orange-600">Learn More</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+    <!-- End Current Vacancies -->
+
     <!-- Maps -->
-    <div class="glide">
+    <div class="glide [ mb-16 ]">
       <section class="[ glide__track ]" data-glide-el="track">
         <div class="glide__slides">
           <div class="glide__slide [ block p-2 ]">
             <figure class="relative">
-              <img src="https://placehold.it/500x500/edf2f7/edf2f7" />
+              <img src="https://placehold.it/500x500/e2e8f0/e2e8f0" />
               <figcaption
                 class="bottom-0 left-0 right-0 [ lg:absolute lg:p-4 ]"
               >
@@ -489,7 +1141,7 @@
                     </address>
                     <a
                       href="#"
-                      class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                      class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                       >Get Directions</a
                     >
                   </article>
@@ -498,7 +1150,7 @@
                       <h3 class="font-bold text-sm">Telephone</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >028 4377 8230</a
                       >
                     </div>
@@ -506,7 +1158,7 @@
                       <h3 class="font-bold text-sm lg:mt-2">Email</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >email@email.com</a
                       >
                     </div>
@@ -517,7 +1169,7 @@
           </div>
           <div class="glide__slide [ block p-2 ]">
             <figure class="relative">
-              <img src="https://placehold.it/500x500/edf2f7/edf2f7" />
+              <img src="https://placehold.it/500x500/e2e8f0/e2e8f0" />
               <figcaption
                 class="bottom-0 left-0 right-0 [ lg:absolute lg:p-4 ]"
               >
@@ -535,7 +1187,7 @@
                     </address>
                     <a
                       href="#"
-                      class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                      class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                       >Get Directions</a
                     >
                   </article>
@@ -544,7 +1196,7 @@
                       <h3 class="font-bold text-sm">Telephone</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >028 4377 8230</a
                       >
                     </div>
@@ -552,7 +1204,7 @@
                       <h3 class="font-bold text-sm lg:mt-2">Email</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >email@email.com</a
                       >
                     </div>
@@ -563,7 +1215,7 @@
           </div>
           <div class="glide__slide [ block p-2 ]">
             <figure class="relative">
-              <img src="https://placehold.it/500x500/edf2f7/edf2f7" />
+              <img src="https://placehold.it/500x500/e2e8f0/e2e8f0" />
               <figcaption
                 class="bottom-0 left-0 right-0 [ lg:absolute lg:p-4 ]"
               >
@@ -581,7 +1233,7 @@
                     </address>
                     <a
                       href="#"
-                      class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                      class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                       >Get Directions</a
                     >
                   </article>
@@ -590,7 +1242,7 @@
                       <h3 class="font-bold text-sm">Telephone</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >028 4377 8230</a
                       >
                     </div>
@@ -598,7 +1250,7 @@
                       <h3 class="font-bold text-sm lg:mt-2">Email</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >email@email.com</a
                       >
                     </div>
@@ -609,7 +1261,7 @@
           </div>
           <div class="glide__slide [ block p-2 ]">
             <figure class="relative">
-              <img src="https://placehold.it/500x500/edf2f7/edf2f7" />
+              <img src="https://placehold.it/500x500/e2e8f0/e2e8f0" />
               <figcaption
                 class="bottom-0 left-0 right-0 [ lg:absolute lg:p-4 ]"
               >
@@ -627,7 +1279,7 @@
                     </address>
                     <a
                       href="#"
-                      class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                      class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                       >Get Directions</a
                     >
                   </article>
@@ -636,7 +1288,7 @@
                       <h3 class="font-bold text-sm">Telephone</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >028 4377 8230</a
                       >
                     </div>
@@ -644,7 +1296,7 @@
                       <h3 class="font-bold text-sm lg:mt-2">Email</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >email@email.com</a
                       >
                     </div>
@@ -655,7 +1307,7 @@
           </div>
           <div class="glide__slide [ block p-2 ]">
             <figure class="relative">
-              <img src="https://placehold.it/500x500/edf2f7/edf2f7" />
+              <img src="https://placehold.it/500x500/e2e8f0/e2e8f0" />
               <figcaption
                 class="bottom-0 left-0 right-0 [ lg:absolute lg:p-4 ]"
               >
@@ -673,7 +1325,7 @@
                     </address>
                     <a
                       href="#"
-                      class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                      class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                       >Get Directions</a
                     >
                   </article>
@@ -682,7 +1334,7 @@
                       <h3 class="font-bold text-sm">Telephone</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >028 4377 8230</a
                       >
                     </div>
@@ -690,7 +1342,7 @@
                       <h3 class="font-bold text-sm lg:mt-2">Email</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >email@email.com</a
                       >
                     </div>
@@ -701,7 +1353,7 @@
           </div>
           <div class="glide__slide [ block p-2 ]">
             <figure class="relative">
-              <img src="https://placehold.it/500x500/edf2f7/edf2f7" />
+              <img src="https://placehold.it/500x500/e2e8f0/e2e8f0" />
               <figcaption
                 class="bottom-0 left-0 right-0 [ lg:absolute lg:p-4 ]"
               >
@@ -719,7 +1371,7 @@
                     </address>
                     <a
                       href="#"
-                      class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                      class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                       >Get Directions</a
                     >
                   </article>
@@ -728,7 +1380,7 @@
                       <h3 class="font-bold text-sm">Telephone</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >028 4377 8230</a
                       >
                     </div>
@@ -736,7 +1388,7 @@
                       <h3 class="font-bold text-sm lg:mt-2">Email</h3>
                       <a
                         href="#"
-                        class="mt-2 block text-xs text-orange-500 hover:text-orange-800"
+                        class="mt-2 block text-xs text-cw-navy hover:text-orange-800"
                         >email@email.com</a
                       >
                     </div>
@@ -751,7 +1403,7 @@
 
     <!-- Ends Maps -->
 
-    <footer class="container pt-16 pb-8">
+    <footer class="container mb-8">
       <h1 class="font-bold text-3xl">Logo Here</h1>
 
       <div class="flex flex-wrap justify-between -mx-4 mt-4 text-sm">
@@ -768,65 +1420,67 @@
             nibh, ultrices in nibh sed, semper consectetur eros.
           </p>
         </aside>
-        <nav class="px-4 -mx-4 [ flex ]">
-          <aside class="block px-4">
-            <h4 class="font-bold text-base mb-2">Quick Links</h4>
-            <a href="#" class="block hover:text-orange-500 mb-2">About Us</a>
-            <a href="#" class="block hover:text-orange-500 mb-2"
-              >Provincial Care</a
-            >
-            <a href="#" class="block hover:text-orange-500 mb-2">News</a>
-            <a href="#" class="block hover:text-orange-500 mb-2">FAQs</a>
-            <a href="#" class="block hover:text-orange-500 mb-2">Contact Us</a>
-          </aside>
-          <aside class="block px-4 ml-16">
-            <h4 class="font-bold text-base mb-2">Our Homes</h4>
-            <a href="#" class="block hover:text-orange-500 mb-2"
-              >Corriewood Private Clinic</a
-            >
-            <a href="#" class="block hover:text-orange-500 mb-2"
-              >The Gate Lodge</a
-            >
-            <a href="#" class="block hover:text-orange-500 mb-2">Blair Lodge</a>
-            <a href="#" class="block hover:text-orange-500 mb-2"
-              >Seeconnell Private Village</a
-            >
-            <a href="#" class="block hover:text-orange-500 mb-2"
-              >Croob Cottages</a
-            >
-            <a href="#" class="block hover:text-orange-500 mb-2">Wood Lodge</a>
-          </aside>
-        </nav>
+        <div class="px-4">
+          <nav class="-mx-4 [ flex flex-wrap ]">
+            <aside class="w-full md:w-auto block px-4">
+              <h4 class="font-bold text-base mb-2">Quick Links</h4>
+              <a href="#" class="block hover:text-cw-navy mb-2">About Us</a>
+              <a href="#" class="block hover:text-cw-navy mb-2"
+                >Provincial Care</a
+              >
+              <a href="#" class="block hover:text-cw-navy mb-2">News</a>
+              <a href="#" class="block hover:text-cw-navy mb-2">FAQs</a>
+              <a href="#" class="block hover:text-cw-navy mb-2">Contact Us</a>
+            </aside>
+            <aside class="w-full md:w-auto block px-4 mt-8 md:mt-0 md:ml-16">
+              <h4 class="font-bold text-base mb-2">Our Homes</h4>
+              <a href="#" class="block hover:text-cw-navy mb-2"
+                >Corriewood Private Clinic</a
+              >
+              <a href="#" class="block hover:text-cw-navy mb-2"
+                >The Gate Lodge</a
+              >
+              <a href="#" class="block hover:text-cw-navy mb-2">Blair Lodge</a>
+              <a href="#" class="block hover:text-cw-navy mb-2"
+                >Seeconnell Private Village</a
+              >
+              <a href="#" class="block hover:text-cw-navy mb-2"
+                >Croob Cottages</a
+              >
+              <a href="#" class="block hover:text-cw-navy mb-2">Wood Lodge</a>
+            </aside>
+          </nav>
+        </div>
       </div>
 
       <section class="flex flex-wrap items-center justify-between text-xs mt-8">
         <span>&copy; Copyright 2020 Corriewood Group</span>
 
-        <nav class="flex items-center">
+        <nav class="flex flex-wrap items-center">
           <a
             href="#"
-            class="text-orange-500 hover:text-orange-800 inline-block mr-2"
+            class="text-cw-navy hover:text-orange-800 inline-block mr-2 my-2"
             >Terms & Conditions</a
           >
           <a
             href="#"
-            class="text-orange-500 hover:text-orange-800 inline-block mr-2"
+            class="text-cw-navy hover:text-orange-800 inline-block mr-2 my-2"
             >Privacy Policy</a
           >
           <a
             href="#"
-            class="text-orange-500 hover:text-orange-800 inline-block mr-12"
+            class="text-cw-navy hover:text-orange-800 inline-block mr-12 my-2"
             >Sitemap</a
           >
-          <a href="#" class="inline-block mr-2"
+          <a href="#" class="inline-block mr-2 my-2"
             ><img
               class="rounded-full"
-              src="https://placehold.it/40x40/edf2f7/edf2f7"
+              src="https://placehold.it/40x40/e2e8f0/e2e8f0"
           /></a>
-          <a href="#" class="inline-block mr-2"
+          <a href="#" class="inline-block mr-2 my-2"
             ><img
               class="rounded-full"
-              src="https://placehold.it/40x40/edf2f7/edf2f7"
+              src="https://placehold.it/40x40/e2e8f0/e2e8f0"
           /></a>
         </nav>
       </section>

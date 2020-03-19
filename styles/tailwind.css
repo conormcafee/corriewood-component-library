@@ -4,6 +4,38 @@
 
 @tailwind utilities;
 
+[x-cloak] {
+  display: none;
+}
+
 p {
   margin-bottom: 16px;
+}
+
+[data-overlay] {
+  position: relative;
+}
+
+[data-overlay]:before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: rgb(2, 43, 49);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 43, 49, 0.5) 0%,
+    rgba(2, 43, 49, 1) 100%
+  );
+}
+
+[data-overlay] > * {
+  position: relative;
+  z-index: 1;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
