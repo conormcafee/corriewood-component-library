@@ -14414,17 +14414,22 @@ p {
   margin-bottom: 16px;
 }
 
-[data-overlay] {
+[data-overlay],
+[data-overlay-alt] {
   position: relative;
 }
 
-[data-overlay]:before {
+[data-overlay]:before,
+[data-overlay-alt]:before {
   content: "";
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   position: absolute;
+}
+
+[data-overlay]:before {
   background: rgb(2, 43, 49);
   background: linear-gradient(
     180deg,
@@ -14433,7 +14438,17 @@ p {
   );
 }
 
-[data-overlay] > * {
+[data-overlay-alt]:before {
+  background: rgb(2, 43, 49);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 135, 5, 0.2) 0%,
+    rgba(242, 135, 5, 0.6) 100%
+  );
+}
+
+[data-overlay] > *,
+[data-overlay-alt] > * {
   position: relative;
   z-index: 1;
 }
