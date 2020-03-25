@@ -15,6 +15,10 @@ module.exports = {
       padding: "1rem"
     }
   },
-  variants: {},
+  variants: {
+    textColor: ["hover", "group-hover"],
+    transform: ["hover", "group-hover"],
+    scale: ["hover", "group-hover"]
+  },
   plugins: []
 };
