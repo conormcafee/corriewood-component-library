@@ -8,6 +8,12 @@ module.exports = {
         "cw-cyan": "#03a696",
         "cw-blood-orange": "#f25c26",
         "cw-cream": "#f2e8cb"
+      },
+      scale: {
+        "200": "2"
+      },
+      opacity: {
+        "15": "0.15"
       }
     },
     container: {
