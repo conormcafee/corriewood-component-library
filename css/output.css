@@ -5431,6 +5431,10 @@ video {
   opacity: 0;
 }
 
+.opacity-15 {
+  opacity: 0.15;
+}
+
 .opacity-25 {
   opacity: 0.25;
 }
@@ -5451,6 +5455,10 @@ video {
   opacity: 0;
 }
 
+.hover\:opacity-15:hover {
+  opacity: 0.15;
+}
+
 .hover\:opacity-25:hover {
   opacity: 0.25;
 }
@@ -5469,6 +5477,10 @@ video {
 
 .focus\:opacity-0:focus {
   opacity: 0;
+}
+
+.focus\:opacity-15:focus {
+  opacity: 0.15;
 }
 
 .focus\:opacity-25:focus {
@@ -12784,6 +12796,11 @@ video {
   --transform-scale-y: 1.5;
 }
 
+.scale-200 {
+  --transform-scale-x: 2;
+  --transform-scale-y: 2;
+}
+
 .scale-x-0 {
   --transform-scale-x: 0;
 }
@@ -12824,6 +12841,10 @@ video {
   --transform-scale-x: 1.5;
 }
 
+.scale-x-200 {
+  --transform-scale-x: 2;
+}
+
 .scale-y-0 {
   --transform-scale-y: 0;
 }
@@ -12862,6 +12883,10 @@ video {
 
 .scale-y-150 {
   --transform-scale-y: 1.5;
+}
+
+.scale-y-200 {
+  --transform-scale-y: 2;
 }
 
 .hover\:scale-0:hover {
@@ -12914,6 +12939,11 @@ video {
   --transform-scale-y: 1.5;
 }
 
+.hover\:scale-200:hover {
+  --transform-scale-x: 2;
+  --transform-scale-y: 2;
+}
+
 .hover\:scale-x-0:hover {
   --transform-scale-x: 0;
 }
@@ -12954,6 +12984,10 @@ video {
   --transform-scale-x: 1.5;
 }
 
+.hover\:scale-x-200:hover {
+  --transform-scale-x: 2;
+}
+
 .hover\:scale-y-0:hover {
   --transform-scale-y: 0;
 }
@@ -12992,6 +13026,10 @@ video {
 
 .hover\:scale-y-150:hover {
   --transform-scale-y: 1.5;
+}
+
+.hover\:scale-y-200:hover {
+  --transform-scale-y: 2;
 }
 
 .group:hover .group-hover\:scale-0 {
@@ -13044,6 +13082,11 @@ video {
   --transform-scale-y: 1.5;
 }
 
+.group:hover .group-hover\:scale-200 {
+  --transform-scale-x: 2;
+  --transform-scale-y: 2;
+}
+
 .group:hover .group-hover\:scale-x-0 {
   --transform-scale-x: 0;
 }
@@ -13084,6 +13127,10 @@ video {
   --transform-scale-x: 1.5;
 }
 
+.group:hover .group-hover\:scale-x-200 {
+  --transform-scale-x: 2;
+}
+
 .group:hover .group-hover\:scale-y-0 {
   --transform-scale-y: 0;
 }
@@ -13122,6 +13169,10 @@ video {
 
 .group:hover .group-hover\:scale-y-150 {
   --transform-scale-y: 1.5;
+}
+
+.group:hover .group-hover\:scale-y-200 {
+  --transform-scale-y: 2;
 }
 
 .rotate-0 {
@@ -19292,6 +19343,10 @@ p {
     opacity: 0;
   }
 
+  .sm\:opacity-15 {
+    opacity: 0.15;
+  }
+
   .sm\:opacity-25 {
     opacity: 0.25;
   }
@@ -19312,6 +19367,10 @@ p {
     opacity: 0;
   }
 
+  .sm\:hover\:opacity-15:hover {
+    opacity: 0.15;
+  }
+
   .sm\:hover\:opacity-25:hover {
     opacity: 0.25;
   }
@@ -19330,6 +19389,10 @@ p {
 
   .sm\:focus\:opacity-0:focus {
     opacity: 0;
+  }
+
+  .sm\:focus\:opacity-15:focus {
+    opacity: 0.15;
   }
 
   .sm\:focus\:opacity-25:focus {
@@ -31480,6 +31543,10 @@ p {
     opacity: 0;
   }
 
+  .md\:opacity-15 {
+    opacity: 0.15;
+  }
+
   .md\:opacity-25 {
     opacity: 0.25;
   }
@@ -31500,6 +31567,10 @@ p {
     opacity: 0;
   }
 
+  .md\:hover\:opacity-15:hover {
+    opacity: 0.15;
+  }
+
   .md\:hover\:opacity-25:hover {
     opacity: 0.25;
   }
@@ -31518,6 +31589,10 @@ p {
 
   .md\:focus\:opacity-0:focus {
     opacity: 0;
+  }
+
+  .md\:focus\:opacity-15:focus {
+    opacity: 0.15;
   }
 
   .md\:focus\:opacity-25:focus {
@@ -43668,6 +43743,10 @@ p {
     opacity: 0;
   }
 
+  .lg\:opacity-15 {
+    opacity: 0.15;
+  }
+
   .lg\:opacity-25 {
     opacity: 0.25;
   }
@@ -43688,6 +43767,10 @@ p {
     opacity: 0;
   }
 
+  .lg\:hover\:opacity-15:hover {
+    opacity: 0.15;
+  }
+
   .lg\:hover\:opacity-25:hover {
     opacity: 0.25;
   }
@@ -43706,6 +43789,10 @@ p {
 
   .lg\:focus\:opacity-0:focus {
     opacity: 0;
+  }
+
+  .lg\:focus\:opacity-15:focus {
+    opacity: 0.15;
   }
 
   .lg\:focus\:opacity-25:focus {
@@ -55856,6 +55943,10 @@ p {
     opacity: 0;
   }
 
+  .xl\:opacity-15 {
+    opacity: 0.15;
+  }
+
   .xl\:opacity-25 {
     opacity: 0.25;
   }
@@ -55876,6 +55967,10 @@ p {
     opacity: 0;
   }
 
+  .xl\:hover\:opacity-15:hover {
+    opacity: 0.15;
+  }
+
   .xl\:hover\:opacity-25:hover {
     opacity: 0.25;
   }
@@ -55894,6 +55989,10 @@ p {
 
   .xl\:focus\:opacity-0:focus {
     opacity: 0;
+  }
+
+  .xl\:focus\:opacity-15:focus {
+    opacity: 0.15;
   }
 
   .xl\:focus\:opacity-25:focus {
